@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Career Coach</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Career Coach</h1>
+        <form method="POST">
+            <textarea name="query" placeholder="Ask your career question here..." required></textarea>
+            <button type="submit">Ask</button>
+        </form>
+        {% if response %}
+        <div class="response-box">
+            <h2>Response:</h2>
+            <p>{{ response }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
